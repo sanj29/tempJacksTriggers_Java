@@ -26,7 +26,7 @@ public class HttpHeaders {
      */
     public void positiveCookieTest(){
         String source = privateSource.method1();
-        Cookie cookie = new Cookie(source, source);
+        Cookie cookie = new Cookie(" " , " ");
         cookie.setPath(source);
         cookie.setSecure(true);
         HttpServletResponse response = null;
