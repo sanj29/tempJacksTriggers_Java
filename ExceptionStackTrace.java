@@ -15,7 +15,7 @@ public class ExceptionStackTrace {
         try {
             throw new RuntimeException();
         } catch (final RuntimeException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         }
     }
 
