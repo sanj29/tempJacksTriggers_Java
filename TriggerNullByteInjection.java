@@ -26,7 +26,7 @@ public class TriggerNullByteInjection {
 
     public void positiveTest2() {
 
-        final String source = "C:\\myfile"+getInvalidFileName();
+        final String source = "test.txt\0foo"; //+getInvalidFileName();
 
         FilenameUtils.normalize(source);
         FilenameUtils.getExtension(source);
