@@ -1,7 +1,8 @@
 package com.codiscope.jaks.triggers.java.struts;
 
 import org.apache.struts.action.ActionForm;
-public class ExampleForm extends ActionForm {
+
+public class ExampleForm2 extends ActionForm {
 
 	private String name;
 	private Integer age;
@@ -20,5 +21,9 @@ public class ExampleForm extends ActionForm {
 
 	public void setAge(Integer age) {
 		this.age = age;
+	}
+
+        public Foo validate(Foo foo) {
+	    return foo;
 	}
 }
