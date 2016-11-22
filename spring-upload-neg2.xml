@@ -7,9 +7,9 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-    <bean id="multipartResolver1" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <!-- 400 MB -->
-        <property name="maxUploadSize" value="409600000" />
-    </bean>
-
+    <bean id="multipartResolver2" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="1024000" />
+        <!-- 1MB -->
+        <property name="maxInMemorySize" value="1024000" />
+    </bean>
 </beans>
