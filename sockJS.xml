@@ -28,9 +28,8 @@
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 
-  <websocket:handlers allowed-origins="*">
-  <websocket:sockjs allowed-origins="*">
+  <websocket:sockjs allowed-origins="*" >
     <websocket:mapping path="/myHandler" handler="myHandler" />
     <websocket:mapping path="/myHandler2" handler="myHandler2" />
-  </websocket:handlers>
+  </websocket:sockjs>
 </web-app>
