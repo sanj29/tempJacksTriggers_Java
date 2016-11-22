@@ -28,8 +28,9 @@
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 
-  <websocket:sockjs allowed-origins="*" >
+  <websocket:stomp-endpoint path="/test,/sockjs" allowed-origins="*">
     <websocket:mapping path="/myHandler" handler="myHandler" />
     <websocket:mapping path="/myHandler2" handler="myHandler2" />
-  </websocket:sockjs>
+  <websocket:sockjs/>
+  </websocket:stomp-endpoint>
 </web-app>
