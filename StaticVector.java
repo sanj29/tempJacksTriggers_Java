@@ -8,7 +8,9 @@ public class StaticVector {
 	//(byte)0,(byte)1,(byte)2,(byte)3};
 
 	public void encrypt(String message) throws Exception {
-	    IvParameterSpec ivSpec = new IvParameterSpec(IV);
+	SecureRandom secureRandom = new SecureRandom();
+	secureRandom.nextBytes(randomIV);
+	    IvParameterSpec ivSpec = new IvParameterSpec(randomIV);
 	    
 }
 }
