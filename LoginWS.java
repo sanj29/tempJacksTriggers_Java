@@ -21,8 +21,7 @@ public class LoginWS {
 	@Autowired private APIService apiService;
 
 	@RequestMapping(value = {"/v1/login/{accountId:[\\d]+}", "/latest/login/{accountId:[\\d]+}"}, method = RequestMethod.POST, 
-			produces = MediaType.APPLICATION_JSON_VALUE);
-	
+			produces = MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody ResponseEntity<ProfileDTO> getUserProfile(
 			@PathVariable Integer accountId,
 			@Validated @RequestBody LoginForm form,
