@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+"http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+	<!-- @name is unique for each form-bean: -->
+
+	<form-beans>
+
+	  <form-bean name="LoginForm" type="org.apache.struts.validator.DynaValidatorForm">
+		<form-property name="name" type="java.lang.String" />
+		<form-property name="password" type="java.lang.String" />
+	  </form-bean>
+
+	  <form-bean name="ColorForm" type="org.apache.struts.action.DynaActionForm">
+		<form-property name="color" type="java.lang.String" />
+	  </form-bean>
+
+	</form-beans>
+
+</struts-config>
+
+
