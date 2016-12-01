@@ -12,7 +12,7 @@
 			type="examples.Action"/>
 
 	</action-mappings>
-<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+<bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
     <property name="supportedMediaTypes" value="text/plain;" />
 </bean>
 </struts-config>
