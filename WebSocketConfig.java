@@ -1,24 +1,22 @@
-package com.codiscope.jaks.triggers.java.websocket;
+//Negative test for registering permissive allowed-origins for WebSocketHandlerRegistry class
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+package com.programcreek.helloworld.controller;
+
+import org.springframework.context.annotation.*;
 import org.springframework.web.socket.WebSocketHandler;
-import org.springframework.web.socket.config.annotation.EnableWebSocket;
-import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
-import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
+import org.springframework.web.socket.config.annotation.*;
 
 @Configuration
 @EnableWebSocket
 public class WebSocketConfig implements WebSocketConfigurer {
 
-    @Override
+    //calling setAllowedOrigins on WebSocketHandlerRegistry instance
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(myHandler(), "/myHandler").setAllowedOrigins("*").withSockJS();
+	registry.addHandler(myHandler(), "/myFoo").setAllowedOrigins("*").withSockJS();
     }
 
     @Bean
     public WebSocketHandler myHandler() {
         return new MyHandler();
     }
-
 }
