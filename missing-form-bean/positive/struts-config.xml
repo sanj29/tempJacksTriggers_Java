@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+"http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="bean1" type="coreservlets.UserFormBean" />
+    <form-bean name="bean2" type="coreservlets.UserFormBean2" />
+  </form-beans>
+
+  <action-mappings>
+    <action path="/actions/register1" type="coreservlets.RegisterAction1" name="bean1" scope="request" />
+    <action path="/actions/register2" type="coreservlets.RegisterAction2" name="bean2" scope="request" />
+  </action-mappings>
+</struts-config>
