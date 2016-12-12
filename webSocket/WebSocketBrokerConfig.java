@@ -15,7 +15,7 @@ public class WebSocketBrokerConfig extends AbstractWebSocketMessageBrokerConfigu
 
     //calling setAllowedOrigins on WebSocketHandlerRegistration instance
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        ((WebSocketHandlerRegistration) registry.addEndpoint("/messages")).setAllowedOrigins("*").withSockJS();
+        ((WebSocketHandlerRegistration) registry.addEndpoint("/messages")).setAllowedOrigins("/").withSockJS();
     }
 
     //calling setAllowedOrigins on StompEndpointRegistry instance

@@ -28,7 +28,7 @@
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 
-  <websocket:handlers allowed-origins="*">
+  <websocket:handlers allowed-origins="http://www.goole.com">
     <websocket:mapping path="/myHandler" handler="myHandler" />
     <websocket:mapping path="/myHandler2" handler="myHandler2" />
   </websocket:handlers>
