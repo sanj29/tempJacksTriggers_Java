@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="multipartResolver1" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 1 MB -->
+        <property name="maxUploadSize" value="1024000" />
+    </bean>
+
+    <bean id="multipartResolver2" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 15 MB -->
+        <property name="maxUploadSize" value="15360000" />
+    </bean>
+
+    <bean id="multipartResolver3" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- 40 MB -->
+        <property name="maxUploadSize" value="40960000" />
+    </bean>
+</beans>
