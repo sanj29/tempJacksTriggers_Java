@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+"http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+  <form-beans>
+    <form-bean name="loginForm" type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="login_name" type="java.lang.String" />
+      <form-property name="login_password" type="java.lang.String" />
+    </form-bean>
+
+    <form-bean name="colorForm" type="org.apache.struts.action.DynaActionForm">
+      <form-property name="color_favColor" type="java.lang.String" />
+    </form-bean>
+  </form-beans>
+
+  <action prefix="login_"
+          type="examples.LoginAction"
+          scope="request"
+          name="colorForm"
+          input="/login.jsp"
+          validate="false" />
+
+  <action prefix="color_"
+          type="examples.ChooseColorAction"
+          scope="request"
+          name="colorForm"
+          input="/color.jsp"
+          validate="false" />
+</struts-config>
